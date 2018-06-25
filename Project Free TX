@@ -1,0 +1,20 @@
+The goal is to enable a secure way to provide 0 fee tx to users while also doing so securely
+
+
+How to achieve doing so:
+
+The goal is to enable users to send a 0 fee tx directly to pools (Note, Nodes will reject any 0 fee tx unless it's already mined)
+
+As pools can just push new tx into blocks and 0 fee tx are valid they could just add the 0 fee tx to the block templete
+
+So why should pools do such a thing?
+
+Pools can request the users trying to send the free tx to submit some hashes to support the pools so the pool is incentived to do so
+And the pool can also increase the amount of hashes required to do so dynamically based on the back-log
+
+
+So spammers cannot abuse it as the amount of shares required for spamming increases with the back-log so they will not be able to filled the queues
+And they also lose money by not submitting the hashes themselves
+
+
+So all in all it's a secure method to enable 0 fee tx by giving the pools an incentive to do so
